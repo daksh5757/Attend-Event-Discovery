@@ -52,12 +52,12 @@ export function EventCard({ event }: { event: Event }) {
       <div className="flex flex-1 flex-col p-5">
         <h3 className="text-lg font-bold leading-snug">{event.title}</h3>
         <p className="mt-1 text-sm text-muted-foreground">by {event.organizer}</p>
-        <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+        <ul className="mt-4 mb-5 space-y-2 text-sm text-muted-foreground">
           <li className="flex items-center gap-2"><CalendarDays className="h-4 w-4 shrink-0 text-primary" />{formatDate(event.startsAt)}</li>
           <li className="flex items-center gap-2"><Clock className="h-4 w-4 shrink-0 text-primary" />{formatTime(event.startsAt)}</li>
           <li className="flex items-center gap-2"><MapPin className="h-4 w-4 shrink-0 text-primary" /><span className="truncate">{event.city === "Online" ? "Online" : `${event.venue.split(",")[0]}, ${event.city}`}</span></li>
         </ul>
-        <div className="mt-auto flex items-center justify-between border-t pt-4 mt-5">
+        <div className="mt-auto flex items-center justify-between border-t pt-4">
           <span className="flex items-center gap-1.5 text-sm font-semibold"><Users className="h-4 w-4 text-primary" />{event.attendees.toLocaleString("en-IN")} going</span>
           <Link
             to="/events/$slug"
