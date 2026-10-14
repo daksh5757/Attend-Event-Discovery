@@ -14,7 +14,7 @@ import appCss from "../styles.css?url";
 import { Toaster } from "sonner";
 import { SavedEventsProvider } from "../context/saved-events";
 import { SiteHeader, SiteFooter } from "../components/site-header";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -42,8 +42,8 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+  console.error("Application error:", error);
+}, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Discover events, meet like-minded people, and make every moment count." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@your_actual_handle" },
     ],
     links: [
       {

@@ -1,24 +1,37 @@
-# Pixel Perfect Painter
+# Attend — Event Discovery Platform
 
-Implement exactly the screenshot and nothing else
+Attend is a responsive event discovery platform that helps users
+explore events, discover new experiences, and save events for later.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-## Build with Lovable
+- Browse events across multiple categories.
+- Search by event name, category, organizer, and location.
+- Filter and sort events.
+- View detailed event information.
+- Save and remove favourite events.
+- Manage a demo user profile.
+- Responsive design for desktop and mobile.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/03033e08-3330-49f4-b590-8bbdc44a0b09).
+## Tech Stack
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- React
+- TypeScript
+- TanStack Start
+- TanStack Router
+- Vite
+- Tailwind CSS
 
-## Development
+## Getting Started
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Prerequisites
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+- Node.js
+- npm
+
+### Installation
+
+Install the dependencies:
+
+```bash
+npm install
